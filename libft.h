@@ -6,7 +6,7 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 18:11:13 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/07 18:48:43 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/07 18:51:16 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct  s_list
 {
     void            *content;
     struct s_list   *next;
-}                   t_list;
+}   t_list;
 
 int ft_isalpha(int  c);
 int ft_isdigit(int  c);
