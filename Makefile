@@ -6,7 +6,7 @@
 #    By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 18:11:26 by cweng-ho          #+#    #+#              #
-#    Updated: 2022/06/01 15:55:34 by cweng-ho         ###   ########.fr        #
+#    Updated: 2022/06/07 18:45:50 by cweng-ho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,16 +49,31 @@ SRCS =	ft_isalpha.c \
 
 OBJS = $(SRCS:.c=.o)
 
+BONUS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+
+BONUS_OBJS = $(BONUS:.c=.o)
+
 all : $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re:
 	fclean $(NAME)
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
