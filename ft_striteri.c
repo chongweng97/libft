@@ -6,23 +6,23 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 12:37:52 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/01 12:48:12 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/09 15:18:04 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int i;
+	unsigned int	i;
 
-    if (s != 0 && f != 0)
-    {
-        i = 0;
-        while (s[i])
-        {
-            f(i, s + i);
-            i++;
-        }
-    }
+	if (s != 0 && f != 0)
+	{
+		i = 0;
+		while (s[i])
+		{
+			f(i, s + i);
+			i++;
+		}
+	}
 }

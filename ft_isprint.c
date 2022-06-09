@@ -6,13 +6,13 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:20:40 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/05/26 13:20:44 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:18:40 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int  c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

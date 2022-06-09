@@ -6,19 +6,19 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 16:10:11 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/07 17:04:37 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/09 14:17:00 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (!del)
-        return ;
-    if (lst)
-    {
-        (*del)(lst->content);
-        free(lst);
-    }
+	if (!del)
+		return ;
+	if (lst)
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }
