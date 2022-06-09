@@ -6,7 +6,7 @@
 #    By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 18:11:26 by cweng-ho          #+#    #+#              #
-#    Updated: 2022/06/07 18:45:50 by cweng-ho         ###   ########.fr        #
+#    Updated: 2022/06/09 16:51:40 by cweng-ho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,3 +77,5 @@ re:
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY: all clean fclean re bonus
