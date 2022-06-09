@@ -6,7 +6,7 @@
 #    By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 18:11:26 by cweng-ho          #+#    #+#              #
-#    Updated: 2022/06/09 16:51:40 by cweng-ho         ###   ########.fr        #
+#    Updated: 2022/06/09 17:04:25 by cweng-ho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,10 @@ BONUS = ft_lstnew.c \
 		ft_lstmap.c \
 
 BONUS_OBJS = $(BONUS:.c=.o)
+
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror -I.
 
 all : $(NAME)
 
