@@ -6,7 +6,7 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 13:05:10 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/09 15:57:20 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/10 15:11:43 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!haystack || !needle)
-		return (0);
-	if (!needle || !needle[0])
+	if ((!*haystack && !*needle) || !*needle)
 	{
 		return ((char *)haystack);
 	}
+	if (!*haystack)
+		return (0);
 	i = 0;
 	while (haystack[i] && i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 13:50:07 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/09 13:14:57 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/10 16:46:21 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = (void *)malloc(count * size);
+	ptr = malloc(count * size);
 	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, count);
+		return (ptr);
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }

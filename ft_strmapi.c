@@ -6,7 +6,7 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 11:37:42 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/09 15:22:38 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/10 14:43:03 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	char	*str;
 	size_t	i;
 
+	if (!s)
+		return (0);
 	str = ft_strdup(s);
 	if (!(str))
 		return (0);

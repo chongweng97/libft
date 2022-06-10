@@ -6,7 +6,7 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 14:04:18 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/09 15:30:49 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/10 14:41:10 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	start;
 	size_t	end;
 
+	if (!s1)
+		return (0);
 	start = 0;
 	while (s1[start] && ft_char_in_set(s1[start], set))
 		start++;

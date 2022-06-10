@@ -6,7 +6,7 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 14:00:02 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/09 15:17:12 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/10 14:35:44 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	*ft_strdup(const char *s)
 	char	*str;
 	size_t	i;
 
-	if (!s)
-		return (0);
-	str = (char *)malloc(sizeof(*s) * (ft_strlen(s) + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (0);
 	i = 0;

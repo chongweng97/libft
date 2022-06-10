@@ -6,7 +6,7 @@
 /*   By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:28:26 by cweng-ho          #+#    #+#             */
-/*   Updated: 2022/06/09 13:13:25 by cweng-ho         ###   ########.fr       */
+/*   Updated: 2022/06/10 12:38:30 by cweng-ho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
+	char	*str;
 
-	if (!s)
-		return ;
+	str = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		*(char *)(s + i) = 0;
+		str[i] = 0;
 		i++;
 	}
 }
