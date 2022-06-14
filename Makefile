@@ -6,7 +6,7 @@
 #    By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 18:11:26 by cweng-ho          #+#    #+#              #
-#    Updated: 2022/06/14 17:36:26 by cweng-ho         ###   ########.fr        #
+#    Updated: 2022/06/14 19:29:24 by cweng-ho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ SRCS =	ft_isalpha.c \
 		ft_strmapi.c \
 		ft_striteri.c \
 		ft_split.c \
-		ft_putnbr_fd.c \
+		ft_putnbr_fd.c 
 
 BONUS = ft_lstnew.c \
 		ft_lstadd_front.c \
@@ -53,7 +53,7 @@ BONUS = ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
-		ft_lstmap.c \
+		ft_lstmap.c 
 
 NAME = libft.a
 
@@ -68,7 +68,7 @@ OBJS = ./*.o
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 $(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) $(OPTIONS) $(SRCS)
@@ -79,11 +79,10 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re:
-	fclean all
+re: fclean $(NAME)
 
 bonus: $(BONUS)
 	$(CC) $(CFLAGS) $(OPTIONS) $(BONUS)
-	ar -rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 .PHONY: all clean fclean re bonus
