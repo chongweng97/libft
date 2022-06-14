@@ -6,7 +6,7 @@
 #    By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 18:11:26 by cweng-ho          #+#    #+#              #
-#    Updated: 2022/06/10 12:27:52 by cweng-ho         ###   ########.fr        #
+#    Updated: 2022/06/13 15:32:33 by cweng-ho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,8 +47,6 @@ SRCS =	ft_isalpha.c \
 		ft_split.c \
 		ft_putnbr_fd.c \
 
-OBJS = $(SRCS:.c=.o)
-
 BONUS = ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
@@ -59,19 +57,24 @@ BONUS = ft_lstnew.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 
-BONUS_OBJS = $(BONUS:.c=.o)
-
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror
 
-all : $(NAME)
+OPTIONS = -c -I.
+
+OBJS = ./*.o
+
+all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
+
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) $(OPTIONS) $(SRCS)
 
 clean:
-	rm -rf $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -79,7 +82,8 @@ fclean: clean
 re:
 	fclean $(NAME)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(BONUS)
+	$(CC) $(CFLAGS) $(OPTIONS) $(BONUS)
+	ar -rcs $(NAME) $(OBJS)
 
 .PHONY: all clean fclean re bonus
