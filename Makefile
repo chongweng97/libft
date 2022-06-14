@@ -6,11 +6,9 @@
 #    By: cweng-ho <chong970620@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 18:11:26 by cweng-ho          #+#    #+#              #
-#    Updated: 2022/06/13 15:32:33 by cweng-ho         ###   ########.fr        #
+#    Updated: 2022/06/14 17:36:26 by cweng-ho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-NAME = libft.a
 
 SRCS =	ft_isalpha.c \
 		ft_isdigit.c \
@@ -57,6 +55,8 @@ BONUS = ft_lstnew.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 
+NAME = libft.a
+
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
@@ -80,7 +80,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re:
-	fclean $(NAME)
+	fclean all
 
 bonus: $(BONUS)
 	$(CC) $(CFLAGS) $(OPTIONS) $(BONUS)
